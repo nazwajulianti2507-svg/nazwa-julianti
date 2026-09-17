@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Siswa - Nazwa Julianti</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header & Navigasi -->
+  <header class="navbar">
+    <div class="logo">Portofolio<span>X</span></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero">Home</a>
+      <a href="#tentang">Tentang Saya</a>
+      <a href="#profil">Profil</a>
+      <a href="#cita-cita">Cita-Cita</a>
+      <a href="#edit" class="btn-edit-nav"><i class="fa-solid fa-pen"></i> Edit Profil</a>
+    </nav>
+    <div class="nav-controls">
+      <button id="themeToggle" class="btn-icon" aria-label="Toggle Theme">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button id="hamburger" class="btn-icon hamburger" aria-label="Open Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Section Hero -->
+  <section id="hero" class="hero-section">
+    <div class="hero-container">
+      <div class="hero-avatar">
+        <img id="displayFoto" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=500&auto=format&fit=crop" alt="Foto Profil Nazwa">
+      </div>
+      <div class="hero-text">
+        <span class="badge">Kelas <span id="displayKelas">10</span> - <span id="displayJurusan">DKV</span></span>
+        <h1>Halo, Aku <span id="displayNamaPanggilan">NAZWA</span>!</h1>
+        <p class="fullname" id="displayNamaLengkap">NAZWA JULIANTI</p>
+        <p class="tagline">"<span id="displayTagline">JANGAN PERNAH MENYERAH</span>"</p>
+        <div class="hero-buttons">
+          <a href="#tentang" class="btn btn-primary">Tentang Saya</a>
+          <a href="#profil" class="btn btn-secondary">Lihat Profil</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Tentang Saya -->
+  <section id="tentang" class="section">
+    <div class="container">
+      <h2 class="section-title">Tentang Saya</h2>
+      <div class="card card-center">
+        <div class="icon-box"><i class="fa-solid fa-user-sparkles"></i></div>
+        <p id="displayDeskripsi" class="text-description">DESKRIPSI DIRI</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Profil & Minat -->
+  <section id="profil" class="section bg-alt">
+    <div class="container">
+      <h2 class="section-title">Profil & Minat</h2>
+      <div class="grid-cards">
+        <div class="card">
+          <i class="fa-solid fa-graduation-cap card-icon"></i>
+          <h3>Akademik</h3>
+          <p><strong>Kelas:</strong> <span id="displayKelasCard">10</span></p>
+          <p><strong>Jurusan:</strong> <span id="displayJurusanCard">DKV</span></p>
+          <p><strong>Konsentrasi:</strong> <span id="displayKonsentrasi">DKV</span></p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-heart card-icon"></i>
+          <h3>Minat & Hobi</h3>
+          <p><strong>Minat:</strong> <span id="displayMinat">MINAT</span></p>
+          <p><strong>Hobi:</strong> <span id="displayHobi">BERMAIN</span></p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-laptop-code card-icon"></i>
+          <h3>Fokus Belajar</h3>
+          <p><strong>Bidang Yang Diinginkan:</strong></p>
+          <p class="highlight" id="displayFokus">MENGEDIT VIDEO</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Cita-Cita -->
+  <section id="cita-cita" class="section">
+    <div class="container">
+      <h2 class="section-title">Impian & Cita-Cita</h2>
+      <div class="card card-cita">
+        <i class="fa-solid fa-user-doctor cita-icon"></i>
+        <h3>Menjadi Seorang</h3>
+        <h2 id="displayCitaCita" class="cita-title">DOKTER</h2>
+        <p class="cita-quote">"Terus belajar dan berproses untuk menggapai masa depan yang cerah."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Edit Profil (Live Preview) -->
+  <section id="edit" class="section bg-alt">
+    <div class="container">
+      <h2 class="section-title">Edit Data Profil</h2>
+      <div class="form-container">
+        <form id="profileForm">
+          <div class="form-group">
+            <label for="inputFoto">Foto Profil:</label>
+            <input type="file" id="inputFoto" accept="image/*">
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="inputNamaLengkap">Nama Lengkap:</label>
+              <input type="text" id="inputNamaLengkap" placeholder="NAZWA JULIANTI">
+            </div>
+            <div class="form-group">
+              <label for="inputNamaPanggilan">Nama Panggilan:</label>
+              <input type="text" id="inputNamaPanggilan" placeholder="NAZWA">
+            </div>
+            <div class="form-group">
+              <label for="inputKelas">Kelas:</label>
+              <input type="text" id="inputKelas" placeholder="10">
+            </div>
+            <div class="form-group">
+              <label for="inputJurusan">Jurusan / Program Keahlian:</label>
+              <input type="text" id="inputJurusan" placeholder="DKV">
+            </div>
+            <div class="form-group">
+              <label for="inputKonsentrasi">Konsentrasi / Kompetensi Keahlian:</label>
+              <input type="text" id="inputKonsentrasi" placeholder="DKV">
+            </div>
+            <div class="form-group">
+              <label for="inputCitaCita">Cita-Cita:</label>
+              <input type="text" id="inputCitaCita" placeholder="DOKTER">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputTagline">Motto / Tagline:</label>
+            <input type="text" id="inputTagline" placeholder="JANGAN PERNAH MENYERAH">
+          </div>
+          <div class="form-group">
+            <label for="inputDeskripsi">Deskripsi Diri:</label>
+            <textarea id="inputDeskripsi" rows="3" placeholder="DESKRIPSI DIRI"></textarea>
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="inputMinat">Minat:</label>
+              <input type="text" id="inputMinat" placeholder="MINAT">
+            </div>
+            <div class="form-group">
+              <label for="inputHobi">Hobi:</label>
+              <input type="text" id="inputHobi" placeholder="BERMAIN">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputFokus">Bidang yang Ingin Dipelajari:</label>
+            <input type="text" id="inputFokus" placeholder="MENGEDIT VIDEO">
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="btnSave" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Simpan</button>
+            <button type="button" id="btnReset" class="btn btn-secondary"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Data berhasil disimpan!</div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTop" class="btn-scroll-top" aria-label="Ke Atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Portofolio Siswa SMK. Dibuat dengan <i class="fa-solid fa-heart"></i> untuk Pembelajaran.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
